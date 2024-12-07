@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+  
+  html {
+    line-height: 1.15;
+    font-family: Poppins, Helvetica, sans-serif;
+  }
+  
+  
+  nav {
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    color: #ffff;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    list-style: none;
+  }
+  .logo :hover{
+    width: 150px;
+    height: 60px;
+    background-image: linear-gradient(yellow,black,red);
+    color: chartreuse;
+    padding: 10px;
+  }
+  
+  section {
+    width: 100%;
+    min-height: 80vh;
+  
+    font-size: xxx-large;
+    flex-direction: column;
+    /* background: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .skill-section {
+    justify-content: center;
+    gap: 60px;
+  }
+  
+  .action {
+    display: none;
+  }
+  
+  #main-btn {
+    display: none;
+  }
+  
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    gap: 10px;
+    z-index: 100;
+  }
+  
+  li:hover {
+    color: rgb(159, 127, 255);
+    padding: 10px;
+  }
+  
+  hr{
+    border: 2px solid rgb(237, 236, 238);
+}
+  hr:hover {
+    border: rgb(113, 205, 15) solid 2px;
+  }
+  .project {
+    display: grid;
+    font-size: large;
+    margin: 100px;
+    text-align: center;
+    /* justify-content: center; */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+  .color{
+    background-image: linear-gradient(rgb(204, 189, 150), red, brown ,black);
+  }
+  
+  strong {
+    color: rgb(211, 108, 132);
+    overflow: hidden;
+    display: inline;
+    animation: colorchange 4s ease-in-out infinite ;
+  }
+  .containercontact {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    font-size: 25px;
+    gap: 50px;
+    text-align: center;
+    justify-content: space-around;
+  }
+  @keyframes colorchange {
+    0% {
+      opacity: 0;
+      color: #f3f2f2;
+    }
+  
+    25% {
+      opacity: 1;
+      color: #7fffd4;
+    }
+  
+    50% {
+      opacity: 1;
+      color: yellow;
+    }
+  
+    75% {
+      opacity: 1;
+      color: magenta;
+    }
+  
+    100% {
+      opacity: 0;
+      color: #f3f2f2;
+    }
+  }
+  
+  .btn {
+    background-color: aquamarine;
+    color: black;
+    margin-top: 20px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .conatinerskill {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 100px;
+    color: white;
+  }
+  
+
+  
+  
+  .box{
+    width: 150px;
+    height: 100px;
+    color: white;
+    border-radius: 50%;
+    background-color: palevioletred;
+    padding: 20px;
+    margin: 20px;
+    font-size: 35px;
+    text-align: center;
+    
+     
+    
+
+  }
+  .box:hover {
+    background-color: black;
+  }
+  .email{
+    margin: 40px;
+    
+  }
+  .email2{
+    padding: 20px;
+  }
+  .ctain{
+    width: 100%;
+    padding: 20px;
+  }
+  .icons{
+    display: flex;
+    justify-content: center;
+
+  }
+  .icons a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: #f3f2f2;
+    margin: 10px;
+    border-radius: 50%;
+  }
+  .bottum{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+
+  }
+
+  @media (max-width: 600px) {
+    ul {
+      position: absolute;
+      top: 100px;
+      left: -100%;
+      gap: 20px;
+      font-size: 26px;
+      width: 100%;
+      height: 400px;
+      background-color: rgb(227, 215, 215);
+      flex-direction: column;
+      transition: 7s;
+    }
+    .conatinerskill {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+    .containercontact {
+      grid-template-columns: 1fr;
+      font-size: 15px;
+    }
+  
+    .project {
+      display: grid;
+      margin: 10px;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+    }
+    section {
+      font-size: large;
+    }
+  
+    ul li {
+      margin: 10px;
+      color: white;
+    }
+  
+    #main-btn:checked ~ ul {
+      left: 0;
+    }
+  
+    .action {
+      display: block;
+      z-index: 10;
+      width: 50px;
+      height: 50px;
+      background-image: url("https://cdn-icons-png.flaticon.com/512/7710/7710488.png");
+      background-size: contain;
+      /* Ensures the image fits within the container */
+    }
+  
+    #main-btn:checked ~ .action {
+      background-image: url("   https://cdn-icons-png.flaticon.com/512/1828/1828778.png ");
+      /* You can switch images if needed */
+    }
+  }
+  
